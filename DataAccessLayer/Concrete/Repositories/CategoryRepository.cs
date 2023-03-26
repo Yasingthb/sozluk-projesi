@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,6 +38,11 @@ namespace DataAccessLayer.Concrete.Repositories
             Find
             */
             return _object.ToList();
+        }
+
+        public List<Category> List(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Category p)
