@@ -15,3 +15,7 @@ C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLay
 C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
 C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writertitle_add.resources
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writertitle_add1.resources
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writerstatus.resources
