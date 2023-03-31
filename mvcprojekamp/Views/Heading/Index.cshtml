@@ -5,6 +5,8 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 @{ string color = ""; }
+@{ string status = ""; }
+@{ string statusColor = ""; }
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +17,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                   
+
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -45,8 +47,11 @@
                             <th style="width: 20%">
                                 Başlık Adı
                             </th>
-                            <th style="width: 30%">
+                            <th style="width: 15%">
                                 Oluşturan Yazar
+                            </th>
+                            <th style="width: 10%">
+                                Durum
                             </th>
                             <th style="width: 8%" class="text-center">
                                 Kategori
@@ -58,11 +63,11 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            if(item.Category.CategoryName== "Tiyatro")
+                            if (item.Category.CategoryName == "Tiyatro")
                             {
                                 color = "badge badge-success";
                             }
-                            if(item.Category.CategoryName == "Spor")
+                            if (item.Category.CategoryName == "Spor")
                             {
                                 color = "badge badge-warning";
 
@@ -94,48 +99,62 @@
                             }
 
 
-                        <tr>
-                            <td>
-                                @item.HeadingID
-                            </td>
-                            <td>
-                                <a>
-                                    @item.HeadingName
-                                </a>
-                                <br />
-                                <small>
-                                    @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
-                                </small>
-                            </td>
-                            <td>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="@item.Writer.Writerİmage">
-                                    </li>
-                                </ul>
-                            </td>
-                            <td class="project-state">
-                                <span class="@color">@item.Category.CategoryName</span>
-                            </td>
-                            <td class="project-actions text-right">
-                                <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingID">
-                                    <i class="fas fa-folder">
-                                    </i>
-                                    Yazılar
-                                </a>
-                                <a class="btn btn-info btn-sm" href="#">
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    Düzenle
-                                </a>
-                                <a class="btn btn-danger btn-sm" href="#">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Sil
-                                </a>
-                            </td>
-                        </tr>
-                         }
+                            <tr>
+                                <td>
+                                    @item.HeadingID
+                                </td>
+                                <td>
+                                    <a>
+                                        @item.HeadingName
+                                    </a>
+                                    <br />
+                                    <small>
+                                        @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
+                                    </small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img alt="Avatar" class="table-avatar" src="@item.Writer.Writerİmage">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    @if (@item.HeadingStatus == true)
+                                    {
+                                        status = "Pasif Yap";
+                                        statusColor = "btn btn-danger btn-sm";
+                                        <p>Aktif</p>
+                                    }
+                                    else
+                                    {
+                                        status = "Aktif Yap";
+                                        statusColor = "btn btn-success btn-sm";
+                                        <p>Pasif</p>
+                                    }
+                                </td>
+                                <td class="project-state">
+                                    <span class="@color">@item.Category.CategoryName</span>
+                                </td>
+                                <td class="project-actions text-right">
+                                    <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingID">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        Yazılar
+                                    </a>
+                                    <a class="btn btn-info btn-sm" href="/Heading/EditHeading/@item.HeadingID">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Düzenle
+                                    </a>
+                                    <a class="@statusColor" href="/Heading/DeleteHeading/@item.HeadingID">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        @status
+                                    </a>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

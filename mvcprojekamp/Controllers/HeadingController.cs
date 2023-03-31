@@ -37,7 +37,7 @@ namespace mvcprojekamp.Controllers
 
                                                  }).ToList();
             ViewBag.vlc = valuecategory;
-            ViewBag.vlw =valueWriters;
+            ViewBag.vlw = valueWriters;
             return View();
 
         }
@@ -49,9 +49,33 @@ namespace mvcprojekamp.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
-        public ActionResult ContentByHeading() 
-        { 
-            return View(); 
+        [HttpGet]
+        public ActionResult EditHeading(int id)
+        {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory;
+
+
+            var headingvalues = hm.GetByID(id);
+            return View(headingvalues);
+        }
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            hm.HeadingUpdate(heading);
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetByID(id);
+            HeadingValue.HeadingStatus = false;
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("Index");
         }
 
     }
