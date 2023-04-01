@@ -18,5 +18,14 @@ namespace mvcprojekamp.Controllers
             var contactvalues = cm.GetList();
             return View(contactvalues);
         }
+        public ActionResult GetContactDetails(int id) 
+        {
+            var valuecontact = cm.GetByID(id);
+            return View(valuecontact);
+        }
+        public PartialViewResult ContactPartial()
+        {
+            return PartialView();
+        }
     }
 }
