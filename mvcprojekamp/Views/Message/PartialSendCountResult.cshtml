@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concreate
+@model List<Message>
+
+@{
+    int item1 = Model.Count;
+    foreach (var item in Model)
+    {
+        if (item.DraftMessage == true)
+        {
+            item1--;
+        }
+    }
+}
+
+@if (item1 > 0)
+{
+    <span class="badge bg-primary float-right">@item1</span>
+}

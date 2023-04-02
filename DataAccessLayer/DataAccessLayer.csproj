@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202303252011229_mig1.cs" />
     <Compile Include="Migrations\202303252011229_mig1.designer.cs">
@@ -95,6 +97,18 @@
     <Compile Include="Migrations\202303311059590_mig_headingstatusadd.cs" />
     <Compile Include="Migrations\202303311059590_mig_headingstatusadd.designer.cs">
       <DependentUpon>202303311059590_mig_headingstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304011217380_Message_Add_Class.cs" />
+    <Compile Include="Migrations\202304011217380_Message_Add_Class.designer.cs">
+      <DependentUpon>202304011217380_Message_Add_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304021420294_add_message_draft.cs" />
+    <Compile Include="Migrations\202304021420294_add_message_draft.designer.cs">
+      <DependentUpon>202304021420294_add_message_draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304022136592_contact_adddate.cs" />
+    <Compile Include="Migrations\202304022136592_contact_adddate.designer.cs">
+      <DependentUpon>202304022136592_contact_adddate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +144,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303311059590_mig_headingstatusadd.resx">
       <DependentUpon>202303311059590_mig_headingstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304011217380_Message_Add_Class.resx">
+      <DependentUpon>202304011217380_Message_Add_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304021420294_add_message_draft.resx">
+      <DependentUpon>202304021420294_add_message_draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304022136592_contact_adddate.resx">
+      <DependentUpon>202304022136592_contact_adddate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

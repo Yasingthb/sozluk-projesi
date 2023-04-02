@@ -18,6 +18,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Mesaj Sayfası</h1>
+
                 </div>
 
             </div>
@@ -25,6 +26,7 @@
     </section>
     <!-- Main content -->
     <section class="content">
+
         <div class="row">
             @Html.Action("ContactPartial", "Contact")
 
@@ -34,6 +36,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Gelen Mesajlar</h3>
                         <div class="card-tools">
+
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Arama">
                                 <div class="input-group-append">
@@ -89,7 +92,7 @@
                                                 <b>@item.Subject</b> - @item.Message.Substring(0, 15)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">5 mins ago</td>
+                                            <td class="mailbox-date">@(((DateTime)item.ContactDate).ToString("dd-MMM-yyyy"))</td>
                                         </tr>
                                     }
                                 </tbody>

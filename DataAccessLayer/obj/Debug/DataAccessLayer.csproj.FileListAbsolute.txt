@@ -21,3 +21,6 @@ C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLay
 C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writerstatus.resources
 C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contentstatusadd.resources
 C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_headingstatusadd.resources
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Message_Add_Class.resources
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.add_message_draft.resources
+C:\Users\Yasin\source\repos\mvcprojekamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.contact_adddate.resources

@@ -25,7 +25,11 @@ namespace mvcprojekamp.Controllers
         }
         public PartialViewResult ContactPartial()
         {
+
             return PartialView();
         }
+    
+
+
     }
 }
